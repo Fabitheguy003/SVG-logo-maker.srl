@@ -52,3 +52,15 @@ const generateSVG = (width, height, color, shape, text, fontSize) => {
     const fontSize = await questionToBuild('Enter the font size for the text: ');
 
     const svg = generateSVG(width, height, color, shape, text, fontSize);
+
+    // Write the generated SVG to a file
+    fs.writeFileSync('logo.svg', svg);
+
+    console.log('Logo generated and saved as logo.svg');
+
+    // Close the user input interface
+    userInput.close();
+  } catch (error) {
+    console.error(error)
+  };
+})();
