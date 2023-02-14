@@ -41,3 +41,14 @@ const generateSVG = (width, height, color, shape, text, fontSize) => {
   </svg>`;
 }; 
 
+(async () => {
+  try {
+    // Ask and receive answers to several questions
+    const color = await questionToBuild('Enter a color for the logo: ');
+    const shape = await questionToBuild('Enter a shape for the logo (rectangle or Circle?): ');
+    const width = await questionToBuild('Enter the width of the logo: ');
+    const height = await questionToBuild('Enter the height of the logo: ');
+    const text = await questionToBuild('Enter the text for the logo: ');
+    const fontSize = await questionToBuild('Enter the font size for the text: ');
+
+    const svg = generateSVG(width, height, color, shape, text, fontSize);
