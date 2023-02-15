@@ -1,4 +1,4 @@
-// packages needed for this application
+// comment all code
 const fs = require('fs');
 const readline = require('readline');
 
